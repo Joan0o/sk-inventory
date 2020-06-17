@@ -1,0 +1,12 @@
+.center-page{
+    position: absolute !important;
+    top: 50% !important;
+    right: 50% !important;
+    transform: translate(50%, -50%) !important;
+}
+.right {
+    position: absolute;
+    right: 11px;
+    top: 5px;
+    display: flex !important;
+}
