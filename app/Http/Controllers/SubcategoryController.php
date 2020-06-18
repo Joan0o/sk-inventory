@@ -16,7 +16,7 @@ class SubcategoryController extends Controller
             return view('home');
         }
 
-        $subcategories = Subcategory::orderBy('name', 'asc')->where('status', 'active')->get();
+        $subcategories = Subcategory::orderBy('name', 'asc')->where('status', 'active')->where('id', '<>', '2')->get();
         $categories = Category::orderBy('name', 'asc')->where('status', 'active')->get();
         return view('subcategories', ["subcategories" => $subcategories, "categories" => $categories]);
     }

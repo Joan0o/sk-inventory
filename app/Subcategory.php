@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Category;
 
 class Subcategory extends Model
 {
@@ -17,5 +18,10 @@ class Subcategory extends Model
     protected $fillable = [
         'name', 'item_count', 'status', 'category_id'
     ];
+
+    public function category(){
+        $c = Category::find($this->category_id);
+        return $c->name;
+    }
 
 }

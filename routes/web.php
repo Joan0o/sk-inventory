@@ -24,7 +24,7 @@ Route::post('/user/update/{id}', 'UserController@update');
 Route::post('/user/edit/{id}', 'UserController@edit');
 
 Route::get('/items', 'ItemController@index')->name('items');
-Route::post('/item/new', 'ItemController@store');
+Route::post('/item/new', 'ItemController@store')->name('item.new');
 Route::post('/item/edit/{id}', 'ItemController@edit');
 Route::post('/item/update/{id}', 'ItemController@update');
 Route::post('/item/delete/{id}', 'ItemController@delete');

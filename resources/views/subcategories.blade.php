@@ -51,7 +51,7 @@ use Illuminate\Support\Facades\Auth;
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Editar') }}
                                 </button>
-                                <a href="{{route('register')}}" class="btn btn-primary">
+                                <a href="{{route('subcategories')}}" class="btn btn-primary">
                                     {{ __('Cancelar') }}
                                 </a>
                             </div>
@@ -113,7 +113,7 @@ use Illuminate\Support\Facades\Auth;
                         <ul class="list-group list-group-flush">
                             @foreach ($subcategories as $subcategory)
                             @if(Auth::user()->isAdmin())
-                            <li class="list-group-item">{{$subcategory->name}}
+                            <li class="list-group-item">{{$subcategory->category()}} \ {{$subcategory->name}} : {{$subcategory->item_count}}
                                 <div class="right" role="group" aria-label="First group">
                                     <form method="POST" action="/subcategory/edit/{{$subcategory->id}}">
                                         @csrf

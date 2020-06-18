@@ -22,7 +22,8 @@
                         <div class="card-header">Descripción</div>
                         <div class="card-body">
                             La aplicación decidí construirla con laravel por razones de eficiencia, y presentación.
-                            La estructura Model View Model, la división clara entre el Front end y El Back end fueron claves para tomar este framework como candidato ideal
+                            La estructura Model View Model, la división clara entre el Front end y El Back end fueron claves para decidirme por este framework.
+                            En la vista del DashBoard no me quedó tiempo para hacer las consultas de los productos de acuerdo a las categorías que estuvieran elegidas.
                         </div>
                     </div>
                 </div>

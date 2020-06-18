@@ -35,7 +35,7 @@ class CategoryController extends Controller
             return view('home');
         }
 
-        $categories = Category::orderBy('name', 'asc')->where('status', 'active')->get();
+        $categories = Category::orderBy('name', 'asc')->where('status', 'active')->where('id', '<>', '7')->get();
         return view('categories', ["categories" => $categories, "category_edition" => $category]);
     }
 

@@ -35,7 +35,7 @@ use Illuminate\Support\Facades\Auth;
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Editar') }}
                                 </button>
-                                <a href="{{route('register')}}" class="btn btn-primary">
+                                <a href="{{route('categories')}}" class="btn btn-primary">
                                     {{ __('Cancelar') }}
                                 </a>
                             </div>
