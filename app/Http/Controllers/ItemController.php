@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Item;
 use Illuminate\Http\Request;
 
-class ItemsController extends Controller
+class ItemController extends Controller
 {
     public function index()
     {
@@ -19,19 +19,19 @@ class ItemsController extends Controller
  
     public function store(Request $request)
     {
-        $item = item::create($request->all());
+        $item = Item::create($request->all());
  
         return response()->json($item, 201);
     }
  
-    public function update(Request $request, item $item)
+    public function update(Request $request, Item $item)
     {
         $item->update($request->all());
  
         return response()->json($item, 200);
     }
  
-    public function delete(item $item)
+    public function delete(Item $item)
     {
         $item->delete();
  

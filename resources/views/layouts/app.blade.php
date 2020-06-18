@@ -1,8 +1,3 @@
-<?php
-
-use Illuminate\Support\Facades\Auth;
-?>
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -13,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Skina T</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -30,7 +25,7 @@ use Illuminate\Support\Facades\Auth;
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     @auth
                     @if(Auth::user()->isAdmin())
                     Admin
@@ -60,7 +55,13 @@ use Illuminate\Support\Facades\Auth;
 
                         @if(Auth::user()->isAdmin())
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar usuario') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Usuarios') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('categories') }}">{{ __('Categorias') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('subcategories') }}">{{ __('Sub categorias') }}</a>
                         </li>
                         @endif
 
